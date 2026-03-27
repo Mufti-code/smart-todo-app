@@ -1,13 +1,13 @@
 # ✨ Smart Todo App
 
-A modern and minimal **Todo List Web App** built with pure JavaScript.
-Designed with a clean UI, smooth interactions, and persistent storage using LocalStorage.
+A modern and responsive **Smart Todo App** designed to boost productivity.
+Built with clean UI and smooth user experience using **HTML, CSS, and JavaScript**.
 
 ---
 
-## 🚀 Live Preview
+## 🚀 Live Demo
 
-👉 *(Tambahkan link deploy kamu di sini nanti — Vercel / Netlify)*
+👉 https://smart-todo-app-two.vercel.app/
 
 ---
 
@@ -17,91 +17,62 @@ Designed with a clean UI, smooth interactions, and persistent storage using Loca
 
 ---
 
-## 🧠 Features
+## ⚡ Features
 
-* ✅ Add new tasks
-* ✏️ Edit existing tasks
-* 🗑️ Delete tasks
-* ✔️ Mark tasks as completed
-* 🔍 Filter tasks (All / Active / Done)
-* 💾 Persistent data using LocalStorage
-* 🎨 Modern dark UI (glass effect)
+* ✅ Add, edit, and delete tasks (CRUD)
+* 🎯 Task filtering (All / Active / Completed)
+* 🌗 Dark / Light mode toggle
+* 💾 Local storage (data saved automatically)
+* 📊 Task progress counter
+* ⚡ Smooth animations & modern UI
+* 📱 Fully responsive (mobile friendly)
 
 ---
 
 ## 🛠️ Tech Stack
 
 * HTML5
-* CSS3 (Modern UI + Glassmorphism)
-* Vanilla JavaScript (No Framework)
+* CSS3 (Flexbox + Custom UI)
+* Vanilla JavaScript (No framework)
 
 ---
 
 ## 📂 Project Structure
 
 ```
-todo-app/
-├── index.html
-├── style.css
-├── script.js
-├── preview.png
-└── README.md
+smart-todo-app/
+│── index.html
+│── style.css
+│── script.js
+│── preview.png
 ```
 
 ---
 
-## ⚙️ How to Run
+## 🧠 What I Learned
 
-1. Clone this repository
-
-```bash
-git clone https://github.com/USERNAME/todo-app.git
-```
-
-2. Open folder
-
-```bash
-cd todo-app
-```
-
-3. Run in browser
-
-```bash
-xdg-open index.html
-```
-
-Or use Live Server in VS Code.
+* DOM manipulation in JavaScript
+* Managing app state with localStorage
+* Building responsive UI from scratch
+* Improving UX with animations and interactions
 
 ---
 
-## 🎯 Purpose
+## 🎯 Future Improvements
 
-This project was built to practice:
-
-* DOM Manipulation
-* CRUD Operations
-* State Management (Frontend)
-* Clean UI Design
-
----
-
-## 🔥 Future Improvements
-
-* 🌗 Dark / Light mode toggle
-* ⏰ Task deadline & reminder
+* 🔔 Task deadline & reminder
 * ☁️ Cloud sync (Firebase)
-* 📱 Mobile optimization improvements
+* 🔐 User authentication
+* 📱 Progressive Web App (PWA)
 
 ---
 
 ## 👨‍💻 Author
 
-**Mufti**
-Full Stack Developer (in progress 🚀)
-From Aceh, Indonesia 🇮🇩
+**Mufti** – Full Stack Developer (Indonesia)
 
 ---
 
 ## ⭐ Support
 
-If you like this project, consider giving it a ⭐ on GitHub!
+If you like this project, give it a ⭐ on GitHub!
