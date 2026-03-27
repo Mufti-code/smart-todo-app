@@ -1,12 +1,12 @@
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 let currentFilter = "all";
 
-// ===== SAVE =====
+// SAVE
 function saveTasks() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-// ===== RENDER =====
+// RENDER
 function renderTasks() {
   const list = document.getElementById("taskList");
   list.innerHTML = "";
@@ -16,6 +16,11 @@ function renderTasks() {
     if (currentFilter === "done") return task.completed;
     return true;
   });
+
+  if (filtered.length === 0) {
+    list.innerHTML = "<p class='empty'>No tasks yet 🚀</p>";
+    return;
+  }
 
   filtered.forEach((task, index) => {
     const li = document.createElement("li");
@@ -50,12 +55,11 @@ function renderTasks() {
 
     li.appendChild(span);
     li.appendChild(actions);
-
     list.appendChild(li);
   });
 }
 
-// ===== ADD =====
+// ADD
 function addTask() {
   const input = document.getElementById("taskInput");
   const text = input.value.trim();
@@ -69,7 +73,7 @@ function addTask() {
   input.value = "";
 }
 
-// ===== EDIT =====
+// EDIT
 function editTask(index) {
   const newText = prompt("Edit task:", tasks[index].text);
   if (newText !== null) {
@@ -79,21 +83,25 @@ function editTask(index) {
   }
 }
 
-// ===== FILTER =====
-function filterTasks(type) {
+// FILTER
+function filterTasks(type, event) {
   currentFilter = type;
+
+  document.querySelectorAll(".filters button")
+    .forEach(btn => btn.classList.remove("active"));
+
+  event.target.classList.add("active");
+
   renderTasks();
 }
 
-// ===== ENTER KEY =====
+// ENTER KEY
 document.getElementById("taskInput")
   .addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      addTask();
-    }
+    if (e.key === "Enter") addTask();
   });
 
-// ===== DARK MODE =====
+// DARK MODE
 const toggle = document.getElementById("themeToggle");
 
 toggle.onclick = () => {
@@ -114,3 +122,4 @@ toggle.onclick = () => {
 
 // INIT
 renderTasks();
+document.querySelector(".filters button").classList.add("active");
